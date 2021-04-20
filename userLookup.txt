@@ -1,0 +1,23 @@
+Problem statement:
+The user should be able to see if the username has been taken as he types in the username
+
+Solution:
+
+Approach - 1 : Using Merkle tree (As explained during the interview)
+
+Merkle tree stores the hashes at every level. 
+Once a tree is formed you can always fetch the hash corresponding to every level without knowing the hashes below that level. 
+This is because once the tree is formed, all the hashes at various levels are stored and available. 
+Even a slightest change in any data point will change its respective hash and hence the root hash will also be changed. 
+Thus the root hash acts as a fingerprint of all the data points.
+
+Approach -2 : Using Hash Table
+
+We can map the usernames to a hash function and store them in a hashTable.
+As the user types in the username, we do a quick lookup in the hashTable.
+The time complexity of the lookup in the hashTable will be O(1) - constantTime
+
+
+
+
+
